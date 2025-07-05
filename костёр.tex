@@ -1,4 +1,4 @@
-%&14pt
+%&12pt
 \pdfpagewidth=297mm
 \pdfpageheight=210mm
 \pdfhorigin=1in
@@ -14,22 +14,24 @@
 \shthickness=0pt
 \quire{4}
 
-\horigin=15mm % outer margin
-\hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by-0mm % additional width for inner margin
+\horigin=9mm % outer margin
+\hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by-9mm % additional width for inner margin
 \dimen0=\htotal \advance\dimen0 by-\hsize \advance\dimen0 by-\horigin \horigin=\dimen0
 \hoffset=\htotal \advance\hoffset-\hsize \advance\hoffset-2\horigin
 \output={\ifodd\pageno\hoffset=0pt\fi \plainoutput}
 \vorigin=15mm
-\vsize=\vtotal \advance\vsize by-30mm
+\vsize=\topskip \advance\vsize by35\baselineskip
 
-\font\TENRM=OMR10
-\headline={\TENRM X\hrulefill X}
-\footline={\hss\tenrm\folio\hss}
+\font\TENSL=OMSL10
+\headline={\rlap{\vbox to0pt{\vss\hbox{\raise5pt\line{\TENSL \ifodd\pageno\hfil\fi
+  Разговор у костра\kern.5pt\ifodd\pageno\else\hfil\fi}}}}\line{\hrulefill}}
+\footline={\raise3pt\line{\hss\tenrm\folio\hss}}
 
-\font\speakerF=omssbx17
+\font\speakerF=omssbx10
 \def\A{\item{\speakerF А.}}
 \def\I{\item{\speakerF И.}}
-\parindent=0pt
+\setbox0=\hbox{\speakerF А.\enskip}
+\parindent=\wd0
 
 \A
 ... со знанием программ развития, реабилитации и так далее.
