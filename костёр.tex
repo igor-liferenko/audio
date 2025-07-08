@@ -8,32 +8,37 @@
 \htotal=.5\shhtotal
 \vtotal=\pdfpageheight
 \shoutline=0pt
-\shstaplewidth=0.1pt \shstaplelength=.5\vtotal
+\shstaplewidth=0pt
 \shcrop=0pt
 \shfootline={}
-\shthickness=0pt
-\quire{4}
+\shthickness=0pt % we want to use staples, but do not use .27mm (and do not do corresponding manipulations with \horigin and \hsize) until you do TODO in ~/term/стихи.tex
+                 % (this document consists only of 3 sheets, so protrusions are almot imperceptible)
+\quire{12}
 
-\horigin=9mm % outer margin
-\hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by-9mm % additional width for inner margin
-\dimen0=\htotal \advance\dimen0 by-\hsize \advance\dimen0 by-\horigin \horigin=\dimen0
-\hoffset=\htotal \advance\hoffset-\hsize \advance\hoffset-2\horigin
+\horigin=9mm
+\hoffset=-9mm
+\hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by\hoffset
+\advance\horigin by-\hoffset
 \output={\ifodd\pageno\hoffset=0pt\fi \plainoutput}
+
 \vorigin=15mm
 \vsize=\topskip \advance\vsize by35\baselineskip
 
 \font\TENSL=OMSL10
-\headline={\rlap{\vbox to0pt{\vss\hbox{\raise5pt\line{\TENSL \ifodd\pageno\hfil\fi
-  Разговор у костра\kern.5pt\ifodd\pageno\else\hfil\fi}}}}\line{\hrulefill}}
+\headline={\rlap{\vbox to0pt{\vss\hbox{\raise5pt\line{\TENSL
+  \ifodd\pageno\hfil Разговор у костра\kern.5pt\else
+  Летний интенсив по тайцзицюань\hfil\fi}}}}\line{\hrulefill}}
 \footline={\raise3pt\line{\hss\tenrm\folio\hss}}
 
 \font\speakerF=omssbx10
 \def\A{\item{\speakerF А.}}
 \def\I{\item{\speakerF И.}}
 \def\L{\item{\speakerF Л.}}
-\def\L{\item{\speakerF Н.}}
+\def\N{\item{\speakerF Н.}}
 \setbox0=\hbox{\speakerF А.\enskip}
 \parindent=\wd0
+
+\hyphenation{тай-цзи-цю-ань}
 
 \A
 ... со знанием программ развития, реабилитации и так далее.
@@ -603,7 +608,7 @@
 Да. Причём это всё отслеживалось по источникам,
 что сначала человек просто штангист
 ведёт занятия
-или какой-нибудь там боксёр,
+или какой-ни\-будь там боксёр,
 хороший боксёр, ну, просто боксёр.
 Потом он
 начинает заявлять о том, что он
@@ -1087,5 +1092,14 @@
 но
 тоже
 утром.
+
+\kern2cm
+\it
+\lineskip=7pt
+\hskip6cm Июнь 2025 г. \par
+\hskip4cm Горный Алтай \par
+\hskip5cm База отдыха «Центр Дао» \par
+\kern3cm
+\hskip2cm \tensl Тренер: Андрей Владимирович Ширай
 
 \bye
