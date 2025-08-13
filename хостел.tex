@@ -1,3 +1,44 @@
+%&12pt
+\pdfpagewidth=297mm
+\pdfpageheight=210mm
+\pdfhorigin=1in
+\pdfvorigin=0pt
+\input quire
+\shhtotal=\pdfpagewidth
+\htotal=.5\shhtotal
+\vtotal=\pdfpageheight
+\shoutline=0pt
+\shstaplewidth=0pt
+\shcrop=0pt
+\shfootline={}
+\shthickness=0pt % we want to use staples, but do not use .27mm (and do not do corresponding manipulations with \horigin and \hsize) until you do TODO in ~/term/стихи.tex
+                 % (this document consists only of 3 sheets, so protrusions are almot imperceptible)
+\quire{4}
+
+\horigin=9mm
+\hoffset=-9mm
+\hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by\hoffset
+\advance\horigin by-\hoffset
+\output={\ifodd\pageno\hoffset=0pt\fi \plainoutput}
+
+\vorigin=15mm
+\vsize=\topskip \advance\vsize by35\baselineskip
+
+\font\TENSL=OMSL10
+\headline={\rlap{\vbox to0pt{\vss\hbox{\raise5pt\line{\TENSL
+  \ifodd\pageno\hfil Разговор в хостеле\kern.5pt\else
+  Возвращение с летнего интенсива по тайцзицюань\hfil\fi}}}}\line{\hrulefill}}
+\footline={\raise3pt\line{\hss\tenrm\folio\hss}}
+
+\font\speakerF=omssbx10
+\def\A{\item{\speakerF А.}}
+\def\I{\item{\speakerF И.}}
+\setbox0=\hbox{\speakerF А.\enskip}
+\parindent=\wd0
+
+\hyphenation{тай-цзи-цю-ань}
+
+\A
 И потом начинаешь замечать, что мозг сам уже просит, просится.
 То есть вот уже даже независимо от тебя уже сам эти все прокручивает форму уже даже во сне,
 как эти все движения делаются.
@@ -398,6 +439,7 @@
 Да.
 Всё.
 Спасибо.
+\bye
 Будьте здоровы.
 До встречи.
 Будьте здоровы.
