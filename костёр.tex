@@ -3,7 +3,7 @@
 \pdfpageheight=210mm
 \pdfhorigin=1in
 \pdfvorigin=0pt
-\input quire
+\input QUIRE
 \shhtotal=\pdfpagewidth
 \htotal=.5\shhtotal
 \vtotal=\pdfpageheight
@@ -11,14 +11,17 @@
 \shstaplewidth=0pt
 \shcrop=0pt
 \shfootline={}
-\shthickness=0pt % we want to use staples, but do not use .27mm (and do not do corresponding manipulations with \horigin and \hsize) until you do TODO in ~/term/стихи.tex
-                 % (this document consists only of 3 sheets, so protrusions are almot imperceptible)
+\shthickness=.27mm
 \quire{12}
 
 \horigin=9mm
 \hoffset=-9mm
 \hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by\hoffset
 \advance\horigin by-\hoffset
+{\catcode`_=11
+  \count255=\q_goal \divide\count255 by2 \advance\count255 by-1
+  \dimen0=\shthickness \multiply\dimen0 by\count255
+  \global\advance\hsize by-\dimen0}
 \output={\ifodd\pageno\hoffset=0pt\fi \plainoutput}
 
 \vorigin=15mm
