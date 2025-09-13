@@ -15,14 +15,13 @@
 \quire{36}
 
 \horigin=9mm
-\hoffset=-9mm
-\hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by\hoffset
-\advance\horigin by-\hoffset
+\hoffset=9mm
+\hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by-\hoffset
 {\catcode`_=11
   \count255=\q_goal \divide\count255 by2 \advance\count255 by-1
   \dimen0=\shthickness \multiply\dimen0 by\count255
   \global\advance\hsize by-\dimen0}
-\output={\ifodd\pageno\hoffset=0pt\fi \plainoutput}
+\output={\ifodd\pageno\else\hoffset=0pt\fi \plainoutput}
 
 \vorigin=15mm
 \vsize=\topskip \advance\vsize by35\baselineskip
