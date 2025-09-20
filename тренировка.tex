@@ -18,7 +18,7 @@
 \hoffset=9mm
 \hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by-\hoffset
 \advance\hsize by-\QUIRE
-\output={\ifodd\pageno\else\hoffset=0pt\fi \plainoutput}
+\output={\ifodd\pageno\else\hoffset=\QUIRE\fi \plainoutput}
 
 \vorigin=15mm
 \vsize=\topskip \advance\vsize by35\baselineskip
