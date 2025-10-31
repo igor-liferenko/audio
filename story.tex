@@ -22,7 +22,6 @@
 \vorigin=3.8mm
 \vsize=\topskip \advance\vsize by37\baselineskip
 
-\def\folio{{\advance\pageno by-1 \number\pageno}}
 \footline={\raise1pt\line{\hss\tenrm\folio\hss}}
 
 \tolerance=10000 \hbadness=10000
@@ -36,6 +35,7 @@
 \moveright2cm\hbox{\T Ивана Денисовича}
 \vfil\eject
 \egroup
+\def\folio{{\advance\pageno by-1 \number\pageno}}
 
 В пять часов утра, как всегда, пробило подъём --- молотком об рельс у штабного барака.
 Перерывистый звон слабо прошёл сквозь стёкла, намёрзшие в два пальца, и скоро затих: холодно
