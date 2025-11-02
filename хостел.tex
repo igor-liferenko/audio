@@ -25,19 +25,9 @@
 
 \font\TENSL=OMSL10
 \headline={\rlap{\vbox to0pt{\vss\hbox{\raise5pt\line{\TENSL
-  \ifodd\pageno\hfil Возвращение с летнего интенсива по тайцзицюань\kern.5pt\else
-  Разговор в хостеле\hfil\fi}}}}\line{\hrulefill}}
+  \ifodd\pageno\hfil Разговор в хостеле\kern.5pt\else
+  Возвращение с летнего интенсива по тайцзицюань\hfil\fi}}}}\line{\hrulefill}}
 \footline={\raise3pt\line{\hss\tenrm\folio\hss}}
-
-\bgroup
-\headline={\hfil}
-\footline={\hfil}
-\topglue 0pt plus7fil
-\centerline{\tt Х\qquad О\qquad С\qquad Т\qquad Е\qquad Л}
-\vskip 0pt plus10fil
-\eject
-\egroup
-\def\folio{{\advance\pageno by-1 \number\pageno}}
 
 \font\speakerF=omssbx10
 \def\A{\item{\speakerF А.}}
