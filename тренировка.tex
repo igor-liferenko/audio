@@ -23,14 +23,6 @@
 \vorigin=15mm
 \vsize=\topskip \advance\vsize by35\baselineskip
 
-\nopagenumbers
-\topglue 0pt plus7fil
-\centerline{\font\F=omdunh10 at30pt \F ТРЕНИРОВКА}
-\vskip 0pt plus10fil
-\eject
-\shipout\vbox{}
-\pageno=1
-
 \font\TENSL=OMSL10
 \headline={\rlap{\vbox to0pt{\vss\hbox{\raise5pt\line{\TENSL
   \ifodd\pageno\hfil Разговор на тренировке\kern.5pt\else
@@ -1980,4 +1972,8 @@
 \hskip6cm Утро 14 июня 2025 года \par
 \hskip3.8cm Спортивная площадка возле хоккейного \par
 \hskip7.3cm корта за «Восходом» \par
+\vfil
+\eject
+\shipout\vbox{}
+\shipout\vbox{}
 \bye
