@@ -3,7 +3,7 @@
 \pdfpageheight=210mm
 \pdfhorigin=1in
 \pdfvorigin=0pt
-\input QUIRE
+\input quire
 \shhtotal=\pdfpagewidth
 \htotal=.5\shhtotal
 \vtotal=\pdfpageheight
@@ -11,14 +11,13 @@
 \shstaplewidth=0pt
 \shcrop=0pt
 \shfootline={}
-\shthickness=.27mm
+\shthickness=0pt
 \quire{12}
 
 \horigin=9mm
 \hoffset=9mm
 \hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by-\hoffset
-\advance\hsize by-\QUIRE
-\output={\ifodd\pageno\else\hoffset=\QUIRE\fi \plainoutput}
+\output={\ifodd\pageno\else\hoffset=0pt\fi \plainoutput}
 
 \vorigin=15mm
 \vsize=\topskip \advance\vsize by35\baselineskip
