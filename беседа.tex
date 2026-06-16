@@ -15,7 +15,9 @@
 \quire{24}
 
 \horigin=10.8975mm
-\hsize=\htotal \advance\hsize by-2\horigin
+\hoffset=1cm
+\hsize=\htotal \advance\hsize by-2\horigin \advance\hsize by-\hoffset
+\output={\ifodd\pageno\else\hoffset=0pt\fi \plainoutput}
 
 \vorigin=10mm
 \vsize=\topskip \advance\vsize by35\baselineskip
