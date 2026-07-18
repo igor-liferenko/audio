@@ -1,4 +1,1 @@
 denisych https://drive.google.com/file/d/1JVTAYl354Prbd6OLjw_LU46pvnUyJj46
-for i in *.HEIC; do echo convert "$i" "${i%HEIC}png" && echo rm "$i"; done
-for i in *.WEBP; do echo dwebp "$i" -o "${i%WEBP}png" && echo rm "$i"; done
-p7zip x file.zip
