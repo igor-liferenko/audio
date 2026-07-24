@@ -25,21 +25,7 @@
 \tolerance=10000 \hbadness=10000
 
 \def\dash{\unskip\nobreak\space---\space}
-\def\Dash{\char`\|\nobreak\space} % NOTE: \char`\| is used instead of ---
-
-%\begingroup
-%\nopagenumbers
-%\font\titlefont=omssdc10 at27.778pt
-%\topglue 4cm
-%\centerline{\titlefont ОДИН ДЕНЬ}
-%\kern20pt
-%\centerline{\titlefont ИВАНА }
-%\kern20pt
-%\centerline{\titlefont ДЕНИСОВИЧА}
-%\vfil
-%\eject\line{}\vfil\eject
-%\endgroup
-%\pageno=1
+\def\Dash{\hbox{---}\nobreak\space} % \hbox avoids the discretionary being inserted
 
 В пять часов утра, как всегда, пробило подъём \dash молотком об рельс у штабного барака.
 Перерывистый звон слабо прошёл сквозь стёкла, намёрзшие в два пальца, и скоро затих: холодно
